@@ -1,0 +1,1 @@
+Prints ASCII characters in one line but exempts "q" and "e" as well as all letters must be lowercase.
