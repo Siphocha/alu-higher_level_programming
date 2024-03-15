@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-"""Defining a class known as Rectangle"""
+# 4-rectangle.py
+"""Defines a Rectangle class."""
+
+
 class Rectangle:
-    """Initialising rectangle and definnning it"""
+    """Represent a rectangle."""
+
     def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
+
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Call property function to use attributes defined above"""
+        """Get/set the width of the Rectangle."""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -21,41 +31,44 @@ class Rectangle:
 
     @property
     def height(self):
+        """Get/set the height of the Rectangle."""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >=0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        return(self.__width * self.__height)
-    
+        """Return the area of the Rectangle."""
+        return (self.__width * self.__height)
+
     def perimeter(self):
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            """Error catching incase theres a 0 in the integers"""
-            return(0)
+            return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-
     def __str__(self):
-        """Everything here is what returns a printable representation of rectangle"""
+        """Return the printable representation of the Rectangle.
+
+        Represents the rectangle with the # character.
+        """
         if self.__width == 0 or self.__height == 0:
-            """another error catch"""
-            return("")
-        
-        rect_shape = []
+            return ("")
+
+        rect = []
         for i in range(self.__height):
-            [rect_shape.append("#") for n in range(self.__width)]
+            [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rect_shape.append("\n")
-        return("".join(rect_shape))
-    
+                rect.append("\n")
+        return ("".join(rect))
+
     def __repr__(self):
-        """returns the rectangle as a string"""
-        rect_shape = "Rectangle(" + str(self.__width)
-        rect_shape = ", " + str(self.__height) + ")"
-        return(rect_shape)
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
