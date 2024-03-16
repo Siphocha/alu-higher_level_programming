@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defined class with base attribute functions"""
 class BaseGeometry:
-
+    """class statement"""
     def area(self):
         """function for defining area"""
         raise Exception("area() is not implemented")
