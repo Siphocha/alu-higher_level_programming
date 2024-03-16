@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defining attribute of first class"""
 
 class BaseGeometry:
 
