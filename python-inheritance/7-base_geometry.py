@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Defined class with base attribute functions"""
 class BaseGeometry:
 
     def area(self):
