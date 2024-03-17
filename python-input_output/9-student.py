@@ -12,4 +12,4 @@ class Student:
 
     def to_json(self):
         """attribute returns directory description"""
-        return self.__dict__.copy
+        return self.__dict__.copy()
