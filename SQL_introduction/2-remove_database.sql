@@ -1,2 +1,2 @@
--- This script deletes the database from the second file.
+-- This script deletes the database frm the second file.
 DROP database IF NOT EXISTS  hbtn_0c_0;
