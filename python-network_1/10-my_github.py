@@ -10,3 +10,4 @@ if __name__ == "__main__":
     auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
     i = requests.get("https://api.github.com/user", auth=auth)
     print(i.json().get("id"))
+

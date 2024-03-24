@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Takes POST request of email and takes parameters to make into text for displaying."""
+"""Takes POST request of email and takes parameters -
+ to make into text for displaying."""
 import requests
 import sys
 
