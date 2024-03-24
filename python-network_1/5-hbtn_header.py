@@ -2,9 +2,10 @@
 """Takes URL, sends request back to it asking to display
 value of variable X-Request-Id"""
 
-import requests
 import sys
+import requests
 
 if __name__ == "__main__":
-    i = requests.get(sys.argv[1])
-    print("{}".format(i.headers["X-Request-Id"]))
+    url = sys.argv[1]
+    i = requests.get(url)
+    print(i.headers.get("X-Request-Id"))
