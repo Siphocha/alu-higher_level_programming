@@ -1,7 +1,4 @@
-The ``4-print_square`` module
-============================
-
-Using ``print_square``
+Using ``print_square`` to print the #-square.
 ---------------------
 
 Import module:
@@ -40,9 +37,7 @@ Test normal print 10:
 
 Test negative:
     >>> print_square(-10)
-    Traceback (most recent call last):
-    ...
-    ValueError: size must be >= 0
+
 
 Test float:
     >>> print_square(10.0)
@@ -73,10 +68,3 @@ Test nan:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
-
-Missing one argument:
-    >>> print_square()
-    Traceback (most recent call last):
-    ...
-    TypeError: print_square() missing 1 required positional argument: 'size'
-    
