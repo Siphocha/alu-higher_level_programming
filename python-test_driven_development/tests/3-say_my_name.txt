@@ -1,56 +1,25 @@
-The ``3-say_my_name`` module
-============================
+#!/usr/bin/python3
+"""Module for say_my_name method."""
 
-Using ``3-say_my_name``
----------------------
 
-Import module:
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
+def say_my_name(first_name, last_name=""):
+    """Method for printing first and last name.
 
-Test basic:
-	>>> say_my_name("hello", "there")
-	My name is hello there
+    Args:
+        first_name: first name string.
+        last_name: last name string.
 
-Test firstname:
-	>>> say_my_name("hello")
-	My name is hello 
+    Raises:
+        TypeError: If first_name or last_name are not strings.
+    """
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
 
-Test lastname empty:
-	>>> say_my_name("hello", "")
-	My name is hello 
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
 
-Test both names empty:
-	>>> say_my_name("", "")
-	My name is  
+    print("My name is {:s} {:s}".format(first_name, last_name))
 
-Test just spaces:
-	>>> say_my_name("   ", "   ")
-	My name is        
-
-Test empty firstname:
-	>>> say_my_name("", "hello")
-	My name is  hello
-
-Test not str arg1:
-    >>> say_my_name(33, "hello")
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
-
-Test not str arg2:
-    >>> say_my_name("hello", 98)
-    Traceback (most recent call last):
-    ...
-    TypeError: last_name must be a string
-
-Test not str arg1 arg2:
-    >>> say_my_name(91, 98)
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
-
-Missing 2 args:
-    >>> say_my_name()
-    Traceback (most recent call last):
-    ...
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/3-say_my_name.txt")
