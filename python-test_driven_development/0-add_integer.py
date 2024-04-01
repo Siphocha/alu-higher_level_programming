@@ -12,5 +12,6 @@ def add_integer(a, b=98):
 
 if __name__ == "__main__":
     import doctest
+    """importing function here because anything upwards counts as an import"""
     doctest.testfile("tests/0-add_integer.txt")
     
