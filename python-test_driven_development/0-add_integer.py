@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """making a function for adding integers
 Call that add_integer"""
-import doctest
 
 def add_integer(a, b=98):
     """This is the function for adding"""
@@ -12,5 +11,6 @@ def add_integer(a, b=98):
     return int(a) + int(b)
 
 if __name__ == "__main__":
+    import doctest
     doctest.testfile("tests/0-add_integer.txt")
     
