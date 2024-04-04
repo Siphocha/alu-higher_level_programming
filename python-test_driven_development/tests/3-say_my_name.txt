@@ -1,0 +1,37 @@
+
+Using the original``3-say_my_name``
+
+Import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test basic:
+	>>> say_my_name("Max", "henry")
+	My name is Max henry
+
+Test firstname:
+    >>> say_my_name("Max")
+    My name is Max
+
+Test lastname empty:
+    >>> say_my_name("Max", "")
+    My name is Max
+
+Test both just spaces:
+    >>> say_my_name(" ", " ")
+    My name is
+
+Test both names empty:
+    >>> say_my_name("","")
+
+Test not string in arg 1 (first name):
+    >>>  say_my_name(9, "Yepper")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+
+Test not str arg1 arg2:
+    >>> say_my_name(68, 71)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string

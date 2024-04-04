@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 if __name__ == "__main__":
     import sys
     #Goes through system to count all arguments and stacks them.
