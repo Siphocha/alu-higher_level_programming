@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Takes in state and lists all cities of that state"""
+"""
+Takes in state and lists all cities of that state
+"""
+
 import MySQLdb
 from sys import argv
 
