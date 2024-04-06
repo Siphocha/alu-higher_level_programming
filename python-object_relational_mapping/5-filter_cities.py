@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Takes in state and lists all cities of that state
-"""
+"""Takes in state and lists all cities of that state"""
 
 import MySQLdb
 import sys
@@ -10,7 +8,7 @@ if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = db.cursor()
     """below is the actual MYSQL commands to be used to retrieve info"""
-    
+
     cur.execute("SELECT cities.id, cities.name, states.name \
     FROM cities JOIN states ON cities.state_id = states.id \
     WHERE states.name = '{}';".format(sys.argv[4]))
