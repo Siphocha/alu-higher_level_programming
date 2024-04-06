@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""prints State object specfiied by
- name argument"""
+"""prints State object specfiied by name argument"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -13,7 +12,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     state = session.query(State).filter_by(name=sys.argv[4]).first()
-    """print statements for stating out the specified name argument"""
     if state:
         print("{}".format(state.id))
     else:
