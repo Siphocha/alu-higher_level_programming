@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 5-main Input for rectangle but with more integers overlaying x&y coords"""
+""" 5-main """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":

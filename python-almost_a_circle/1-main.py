@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 1-main to give Rectangle input """
+""" 1-main """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":

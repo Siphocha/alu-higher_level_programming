@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" 7-main.py This updates the x,y and base inputs and tries different integer lengths for lite error catching"""
+""" Doc """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":
+
     r1 = Rectangle(10, 10, 10, 10)
     print(r1)
 

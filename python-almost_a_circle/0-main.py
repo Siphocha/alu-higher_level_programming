@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This is essentially where the testing goes down to see if shapes print out."""
-from models.base import Base 
+""" 0-main """
+from models.base import Base
 
 if __name__ == "__main__":
+
     b1 = Base()
     print(b1.id)
 
