@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-""" 2-main """
+""" 2-main Takes Rectangle to process diff type of inputs then format it to fit the original Rectangle Class"""
 from models.rectangle import Rectangle
-
 if __name__ == "__main__":
-
     try:
         Rectangle(10, "2")
     except Exception as e:

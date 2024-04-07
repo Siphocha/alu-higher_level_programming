@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" 1-main """
+""" 1-main This just tests the Rectangle with different inputs"""
 from models.rectangle import Rectangle
-
 if __name__ == "__main__":
 
     r1 = Rectangle(10, 2)

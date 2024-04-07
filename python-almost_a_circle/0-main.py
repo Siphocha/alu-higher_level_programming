@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" 0-main """
+""" 0-main this is just testing the Base function"""
 from models.base import Base
-
 if __name__ == "__main__":
 
     b1 = Base()
