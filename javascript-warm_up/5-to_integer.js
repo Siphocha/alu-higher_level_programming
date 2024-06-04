@@ -4,7 +4,7 @@ const argument1 = process.argv[2];
 // Converting argument to integer to verify info
 const parseInting = parseInt(argument1);
 
-if (!isNan(parseInting)) {
+if (!isNaN(parseInting)) {
   console.log(`My number: ${parseInting}`);
 } else {
   // Not an integer
