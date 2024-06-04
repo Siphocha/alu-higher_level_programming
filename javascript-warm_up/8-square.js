@@ -1,6 +1,6 @@
-
+#!/usr/bin/node
+//Making a square out of Xs
 const square = parseInt(process.argv[2]);
-// defining size of square made of "x"'s.
 if (isNaN(x)) {
   console.log('Missing size');
 } else {
