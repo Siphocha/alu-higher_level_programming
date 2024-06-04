@@ -6,7 +6,7 @@ const argument2 = process.argv[3];
 
 if ((argument1 === undefined && argument2 === undefined) || argument2 === 'HBTN') {
   // prints undefined for both arguments
-  console.log('undefined');
+  console.log('undefined is undefined');
 } else {
   // prints the two arguments with "is" inbetween
   console.log(argument1 + 'is' + argument2);
