@@ -1,19 +1,21 @@
 #!/usr/bin/node
 // This script completed by user id. e.g: in webapp scans who does what
 const request = require('request');
-const fs = require('fs');
+const Url = process.argv[2];
 
-const URL = process.argv[2];
-const pathway = process.argv[3];
-
-request(URL, (error, response, body) => {
+request(Url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    fs.writeFile(pathway, body, 'utf-8', (error) => {
-      if (error) {
-        console.log(error);
+    const todos = JSON.parse(body);
+    const userTaskCounts = todos.reduce((counts, todo) => {
+      if (todo.completed) {
+        const userId = todo.userId;
+        counts[userId] = (counts[userId] || 0) + 1;
       }
-    });
+      return counts;
+    }, {});
+
+    console.log(userTaskCounts);
   }
 });
